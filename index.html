@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Medical I.A Diagnostics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #009383;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service {
+            width: 30%;
+            height: 50%;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .service h3 {
+            margin-top: 0;
+            cursor: pointer; /* Adiciona cursor de ponteiro para indicar que é clicável */
+        }
+
+        .service p {
+            display: none; /* Oculta os parágrafos por padrão */
+        }
+
+        .service:hover p {
+            display: block; /* Exibe os parágrafos quando o mouse estiver sobre o título do serviço */
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .service_div {
+            display: flex;
+            flex-wrap: wrap;
+            column-count: 3;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="_Médico Ortopedista Minimalista Logo.png" alt="Azure Medical Logo" class="logo"/>
+    <h1>Azure Medical I.A Diagnostics</h1>
+    <div></div>
+    <div></div>
+    <p>
+        A saúde deve ser um direito acessível para todos, garantindo a melhor qualidade possível para cada cidadão.
+        Não há ferramenta melhor para isso do que a tecnologia de ponta, que reduz os custos operacionais e diminui o
+        tempo de espera, aspectos cruciais para um tratamento eficaz. Propomos, então, uma solução simples, porém
+        eficaz: um auxílio no pré-diagnóstico, na triagem e no acompanhamento de determinadas síndromes e doenças.
+        Através de um sistema de inteligência artificial que analisa os dados do paciente e os compara com um banco de
+        dados de casos semelhantes, podemos identificar padrões e indicar um tratamento mais eficaz e rápido,
+        auxiliando médicos e pacientes com informações precisas para seus tratamentos.
+    </p>
+    <div></div>
+    <div></div>
+    <h2>Nosso projeto</h2>
+    <div class="service_div">
+        <div class="service">
+            <h3>Detecção de Padrões Sutis</h3>
+            <p>
+              Utilizar algoritmos de deep learning para identificar padrões sutis em imagens médicas e dados genéticos que são indicativos de certas síndromes
+            </p>
+        </div>
+        <div class="service">
+            <h3>Análise Integrada de Dados</h3>
+            <p>
+              Combinar informações de várias fontes (imagens, testes genéticos, histórico médico) para fornecer um diagnóstico holístico.
+            </p>
+        </div>
+        <div class="service">
+            <h3>Base de Conhecimento de Síndromes</h3>
+            <p>
+              Incorporar uma extensa base de dados que inclui literatura médica, estudos de caso e atualizações de pesquisa para suportar as decisões da IA.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>Relatórios Detalhados e Recomendações</h3>
+            <p>
+              Gerar relatórios detalhados que explicam os fundamentos dos diagnósticos da IA, incluindo recomendações para testes adicionais ou tratamentos baseados em evidências.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>Interface Intuitiva para Usuários</h3>
+            <p>
+              Desenvolver uma interface amigável para que médicos e profissionais de saúde possam interagir facilmente com o sistema, ajustar parâmetros de análise e revisar os resultados.
+            </p>
+        </div>
+
+        <div class="service">
+            <h3>Aprendizado Contínuo e Adaptação</h3>
+            <p>
+              Implementar mecanismos de feedback que permitem ao sistema aprender com novos dados e ajustes feitos pelos especialistas, melhorando continuamente sua precisão e confiabilidade.
+            </p>
+        </div>
+    </div>
+
+    <h2>Solicite informações</h2>
+    <form id="appointment-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" />
+
+        <label for="service">Service:</label>
+        <select id="service" required>
+            <option value="">Select a service</option>
+            <option value="checkup">Annual Checkup</option>
+            <option value="vaccination">Vaccination</option>
+            <option value="consultation">Consultation</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4"></textarea>
+
+        <button type="submit">Request Appointment</button>
+    </form>
+</div>
+
+
+<script>
+    document
+        .getElementById('appointment-form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+
+            // Log form data
+            console.log(data);
+
+            // Reset form
+            event.target.reset();
+        });
+</script>
+</body>
+</html>
